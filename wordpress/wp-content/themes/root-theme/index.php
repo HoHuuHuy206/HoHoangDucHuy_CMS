@@ -43,6 +43,15 @@ $max_pages = ceil($total_posts / $posts_per_page);
 
         <section class="home-content">
 
+            <!-- ================================
+                 MODULE (12 - TỰ CHỌN 1): TIÊU ĐIỂM THỂ THAO & VIDEO HIGHLIGHTS
+            ================================= -->
+            <?php
+            if ($paged <= 1 && file_exists(get_template_directory() . '/modules/module-12-featured-sports.php')) {
+                include get_template_directory() . '/modules/module-12-featured-sports.php';
+            }
+            ?>
+
             <div class="section-heading">
                 <h1>Latest Posts</h1>
             </div>
