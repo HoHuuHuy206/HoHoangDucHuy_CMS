@@ -40,6 +40,19 @@
         </div>
     </section>
 
+    <!-- WIDGET TEST 4: ĐẶT DƯỚI PHẦN CATEGORIES THEO YÊU CẦU -->
+    <section class="widget tdc-fit-widget-test-4-sidebar">
+        <div class="tdc-fit-widget-test-4-box">
+            <?php
+            if (is_active_sidebar('widget_test_4')) {
+                dynamic_sidebar('widget_test_4');
+            } else {
+                root_theme_render_widget_test_4();
+            }
+            ?>
+        </div>
+    </section>
+
     <!-- MODULE (10): 10 BÀI VIẾT MỚI NHẤT PHONG CÁCH FIT TDC -->
     <?php
     if (file_exists(get_template_directory() . '/modules/module-10-recent-posts.php')) {
@@ -51,13 +64,6 @@
     <?php
     if (file_exists(get_template_directory() . '/modules/module-11-archive.php')) {
         include get_template_directory() . '/modules/module-11-archive.php';
-    }
-    ?>
-
-    <!-- MODULE (13 - TỰ CHỌN 2): LỊCH THI ĐẤU & KẾT QUẢ THỂ THAO -->
-    <?php
-    if (file_exists(get_template_directory() . '/modules/module-13-fixtures.php')) {
-        include get_template_directory() . '/modules/module-13-fixtures.php';
     }
     ?>
 
